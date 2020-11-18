@@ -1,0 +1,162 @@
+:root{
+  --main-text-color: #707070;
+  --label-bg-color: #E6E2E2;
+  --label-font-color: #1D1C1C;
+  --mandatory-style-bg: #FF2A2A;
+  --validation-bg-color: #ff6060;
+}
+
+.main-text{
+  color: var(--main-text-color);
+}
+
+.color-label-bg{
+  background-color: var(--label-bg-color);
+}
+
+.color-form-desc{
+  color: var(--label-font-color);
+}
+
+.mandatory{
+  background-color: var(--mandatory-style-bg);
+  color: #ffffff;
+}
+
+.inner_wrapper{
+  width: 650px;
+  margin: auto;
+}
+
+.company_logo{
+  width: 200px;
+  height: inherit;
+}
+
+nav ul .item{
+  list-style: none;
+  /* margin: 0 1em; */
+  padding: 0.5em 1em;
+}
+
+nav ul .item a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+}
+
+.main-visual{
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: 50% 34%;
+  background-image: url("../img/markus-winkler-q3QPw37J6Xs-unsplash.jpg");
+}
+
+.company_logo img{
+  width: 100%;
+}
+
+.contact-guide-wrapper{
+  margin: 2em 0;
+}
+
+.contact-wrapper{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ min-height: 100vh;
+}
+
+form{
+  width: 100%;
+}
+
+.form_validation{
+  position: absolute;
+  top: -10px;
+  right: -100px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: var(--validation-bg-color);
+  color: #ffffff;
+  font-size: 0.8em;
+  padding: 0.5em;
+}
+
+.grid-wrapper{
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+  gap: 1em;
+}
+
+.input_wrapper{
+  position: relative;
+}
+
+.input_error{
+  outline: 2px solid crimson;
+}
+
+.input{
+  width: 100%;
+  height: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  outline: solid 2px #E6E2E2;
+}
+
+input[type="checkbox"]{
+  outline: none;
+}
+
+label span{
+  font-size:0.7em;
+  padding: 2px 7px;
+  border-radius: 5px;
+  
+}
+
+input, select, textarea{
+  border: solid 1px #E6E2E2;
+  padding-left: 1em;
+  color: var(--label-font-color);
+  grid-column: 2/3;
+}
+
+input[type="file"]{
+  padding-top: 5px
+}
+
+textarea{
+  resize: none;
+  grid-row: 7/10;
+}
+
+.label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 1/2;
+  background-color: var(--label-bg-color);
+  padding: 0 1em;
+}
+
+.file{
+  grid-row: 10;
+}
+
+select{
+}
+
+.privacy-policy{
+  margin: 2em 0;
+}
+
+.chk-agree{
+  margin-bottom: 2em;
+}

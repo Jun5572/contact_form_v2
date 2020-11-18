@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>CONTACT US</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/contact.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="outer_wrapper">
+      <header class="flex flex-space-between">
+        <a class="company_logo" href="#"><img src="../img/Company Name-logo-black.png" alt=""></a>
+        <nav>
+          <ul class="global_menu-list flex flex-space-between">
+            <li class="item"><a href="">TOP</a></li>
+            <li class="item"><a href="">ABOUT</a></li>
+            <li class="item"><a href="">SERVICE</a></li>
+            <li class="item"><a href="">RECRUT</a></li>
+            <li class="item"><a href="">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main-visual"></div>
+      <div class="inner_wrapper">
+        <div class="contact-guide-wrapper main-text">
+          <p>お問い合わせは下記のフォームより承っております。</p>
+          <p>必要事項をご記入の上、「送信」ボタンをクリックしてください。</p>
+          <p>ご入力いただいた個人情報に関しましては、弊社の「プライバシーポリシー」をご覧ください。</p>
+        </div>
+        <div class="contact-wrapper">
+          <form id="app">
+            <div class="grid-wrapper">
+              <label class="label">お名前<span class="mandatory">必須</span></label>
+              <div class="input_wrapper">
+                <p class="form_validation" v-for="error in errors.name">{{error}}</p>
+                <input class="input"  type="text" name="name" v-model="name" v-on:input="validator('name', 10)" placeholder="お名前">
+              </div>
+            
+              <label class="label">お名前(カナ)<span class="mandatory">必須</span></label>
+              <input class="input" type="text" name="name" placeholder="フリガナ">
+            
+              <label class="label">会社名</label>
+              <input class="input" type="text" name="name" placeholder="会社名">
+            
+              <label class="label">メールアドレス<span class="mandatory">必須</span></label>
+              <input class="input" type="email" name="email">
+            
+              <label class="label">メールアドレス確認用<span class="mandatory">必須</span></label>
+              <input class="input" type="email" name="email">
+            
+              <label class="label">カテゴリ<span class="mandatory">必須</span></label>
+              <select class="color-label-bg">
+                <option value="0" default>選択してください</option>
+              </select>
+
+              <label class="label">お問い合わせ内容<span class="mandatory">必須</span></label>
+              <textarea name=“text” rows="5" cols="40"></textarea>
+
+              <label class="label file">添付ファイル</label>
+              <input class="input" type="file" name="name" placeholder="">
+            </div>
+            <div class="privacy-policy-window">
+              
+            </div>
+              <!-- <div class="privacy-policy main-text">
+                <a href="">お問い合わせにおける個人情報の取り扱い</a>
+                <span>・</span>
+                <a href="">採用応募における個人情報の取り扱い</a>
+                <p>上記をお読みいただき、同意の上送信してください。</p>
+              </div> -->
+              <div class="chk-agree main-text">
+                <input class="" type="checkbox" name="agree" value="">
+                <span>お問い合わせにおける個人情報の取扱い、採用情報における個人情報の取扱いに同意する。</span>
+              </div>
+            <button class="btn submit" type="submit" method="post">送信</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
