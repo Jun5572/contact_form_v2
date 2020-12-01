@@ -8,13 +8,36 @@
   --submit-button-bg-color: #1969B4;
 }
 
+/* ::-webkit-scrollbar
+::-webkit-scrollbar-track
+::-webkit-scrollbar-thumb */
+
+/* スクロールバーの幅を決める */
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+
+/* スクロールバーの背景色 */
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #0036c9;
+}
+
 body{
   font-size: 15px;
 }
 
 header{
-  padding: 0 2em;
+  width: 100%;
+  padding: 0 100px;
   align-items: center;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
 }
 
 button{
@@ -25,7 +48,6 @@ button{
   padding: 0;
   appearance: none;
 }
-
 
 .flex{
   display: flex;
@@ -38,6 +60,51 @@ button{
   width: 100%;
   min-height: 100vh;
   background-color: #ffffff;
+}
+
+.company_logo{
+  width: 200px;
+  height: inherit;
+}
+
+.company_logo img{
+  width: 100%;
+}
+
+.main-visual{
+  width: 100%;
+  height: 370px;
+  background-size: cover;
+  background-position: center;
+}
+
+.top{
+  background-image: url("../img/janis-rozenfelds-Ap5Z7SvSx8I-unsplash.jpg");
+}
+
+.about{
+  background-image: url("../img/about.jpg");
+  background-position: 100% 70%;
+}
+
+.service{
+  background-image: url("../img/service.jpg");
+}
+
+.contact{
+  background-image: url("../img/main_visual_2.jpg");
+}
+
+nav ul .item{
+  list-style: none;
+  /* margin: 0 1em; */
+  padding: 0.5em 1em;
+}
+
+nav ul .item a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
 }
 
 .btn{

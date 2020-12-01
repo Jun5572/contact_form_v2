@@ -26,35 +26,7 @@
 .inner_wrapper{
   width: 650px;
   margin: auto;
-}
-
-.company_logo{
-  width: 200px;
-  height: inherit;
-}
-
-nav ul .item{
-  list-style: none;
-  /* margin: 0 1em; */
-  padding: 0.5em 1em;
-}
-
-nav ul .item a{
-  text-decoration: none;
-  font-weight: bold;
-  color: #000000;
-}
-
-.main-visual{
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: 50% 34%;
-  background-image: url("../img/markus-winkler-q3QPw37J6Xs-unsplash.jpg");
-}
-
-.company_logo img{
-  width: 100%;
+  padding-bottom: 70px;
 }
 
 .contact-guide-wrapper{
@@ -74,14 +46,22 @@ form{
 
 .form_validation{
   position: absolute;
-  top: -10px;
-  right: -100px;
-  width: 200px;
+  /* width: 200px; */
   border-radius: 5px;
   background-color: var(--validation-bg-color);
   color: #ffffff;
   font-size: 0.8em;
   padding: 0.5em;
+}
+
+.form_validation.name_first{
+  top: 5px;
+  left: 125px;
+}
+
+.form_validation.name_last{
+  top: 5px;
+  right: 5px;
 }
 
 .grid-wrapper{
@@ -93,6 +73,8 @@ form{
 
 .input_wrapper{
   position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
 .input_error{
@@ -108,6 +90,11 @@ input:focus,
 select:focus,
 textarea:focus{
   outline: solid 2px #E6E2E2;
+}
+
+input[name="name_last"],
+input[name="kana_last"]{
+  margin-left: 1em;
 }
 
 input[type="checkbox"]{
@@ -129,7 +116,7 @@ input, select, textarea{
 }
 
 input[type="file"]{
-  padding-top: 5px
+  padding-top: 5px;
 }
 
 textarea{
@@ -150,7 +137,20 @@ textarea{
   grid-row: 10;
 }
 
-select{
+.privacy-policy-window{
+  width: 90%;
+  height: 10em;
+  background-color: rgb(235, 235, 235);
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  margin: 2em auto;
+  padding: 1em 2em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* white-space: nowrap; */
+}
+
+.privacy-policy-window p{
+  font-size: 0.8em;
 }
 
 .privacy-policy{
@@ -159,4 +159,17 @@ select{
 
 .chk-agree{
   margin-bottom: 2em;
+}
+
+.policy-text h4{
+  margin-bottom: 0.5em;
+}
+
+.policy-text p {
+  padding-left: 1em;
+  margin-bottom: 2em;
+}
+
+.policy-text ul{
+  padding-left: 3em;
 }
