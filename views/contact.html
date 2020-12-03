@@ -37,8 +37,8 @@
               <div class="input_wrapper">
                 <p class="form_validation name_first" v-for="error in errors.name_first">{{error}}</p>
                 <p class="form_validation name_last" v-for="error in errors.name_last">{{error}}</p>
-                <input class="input" type="text" name="name_first" v-model="name_first" v-on:input="validator('name_first', 6)" placeholder="姓" maxlength="8">
-                <input class="input" type="text" name="name_last" v-model="name_last" v-on:input="validator('name_last', 6)" placeholder="名" maxlength="8">
+                <input class="input" type="text" name="name_first" v-model="name_first" v-on:input="validator('name_first', 6)" placeholder="姓" maxlength="8" accept-charset="UTF-8">
+                <input class="input" type="text" name="name_last" v-model="name_last" v-on:input="validator('name_last', 6)" placeholder="名" maxlength="8"  accept-charset="UTF-8">
               </div>
             
               <label class="label">お名前(カナ)<span class="mandatory">必須</span></label>
@@ -69,7 +69,7 @@
               <label class="label file">添付ファイル</label>
               <input class="input" type="file" name="name" placeholder="test">
             </div>
-            <div class="privacy-policy-window">
+            <div id="privacy-policy" class="privacy-policy-window">
               <div class="policy-text">
                 <p>ウェブサイトは、株式会社〇〇（以下「当社」）の事業内容等を紹介するサイトです。</p>
                 
@@ -104,10 +104,6 @@
                 <h4>お問い合せ</h4>
                 <p>当社の個人情報の取扱に関するお問い合せは下記までご連絡ください。</p>
                 
-                株式会社〇〇
-                〒〇〇〇-〇〇〇〇
-                東京都〇〇区…
-                お問い合わせはこちら(フォームへ)
               </div>
             </div>
               <!-- <div class="privacy-policy main-text">
@@ -117,14 +113,16 @@
                 <p>上記をお読みいただき、同意の上送信してください。</p>
               </div> -->
               <div class="chk-agree main-text">
-                <input class="" type="checkbox" name="agree" value="">
-                <span>お問い合わせにおける個人情報の取扱い、採用情報における個人情報の取扱いに同意する。</span>
+                <input id="agree" class="" type="checkbox" name="agree" value="">
+                <label for="agree" class="checkbox-agree">お問い合わせにおける個人情報の取扱い、採用情報における個人情報の取扱いに同意する。</label>
+                <!-- <span>お問い合わせにおける個人情報の取扱い、採用情報における個人情報の取扱いに同意する。</span> -->
               </div>
-            <button class="btn submit" type="submit" method="post">送信</button>
+            <button class="btn submit" type="submit" method="post" disabled="disabled">送信</button>
           </form>
         </div>
       </div>
     </div>
     <script src="../js/app.js"></script>
+    <script src="../js/contact.js"></script>
   </body>
 </html>

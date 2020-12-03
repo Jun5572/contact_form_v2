@@ -99,6 +99,7 @@ input[name="kana_last"]{
 
 input[type="checkbox"]{
   outline: none;
+  display: none;
 }
 
 label span{
@@ -159,6 +160,51 @@ textarea{
 
 .chk-agree{
   margin-bottom: 2em;
+}
+
+.checkbox-agree{
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 0 5px 30px;
+  position: relative;
+  width: auto;
+}
+
+.checkbox-agree::before{
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 16px;
+  left: 5px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+.checkbox-agree::after{
+  border-right: 6px solid #1969B4;
+  border-bottom: 3px solid #1969B4;
+  content: '';
+  display: block;
+  height: 20px;
+  left: 7px;
+  margin-top: -16px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg) translate3d(0,2px,0) scale3d(.7,.7,1);
+  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+  width: 9px;
+}
+
+input[type=checkbox]:checked + .checkbox-agree::before {
+  border-color: #666;
+}
+input[type=checkbox]:checked + .checkbox-agree::after {
+  opacity: 1;
+  transform: rotate(45deg) scale3d(1,1,1);
 }
 
 .policy-text h4{
